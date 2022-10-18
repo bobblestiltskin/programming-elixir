@@ -1,0 +1,7 @@
+iex(1)> MyList.mapsum [1, 2, 3, 7], &(&1 * &1)
+63
+iex(2)> MyList.mapsum [1], &(&1 * &1)
+1
+iex(3)> MyList.mapsum [], &(&1 * &1)
+0
+iex(4)>

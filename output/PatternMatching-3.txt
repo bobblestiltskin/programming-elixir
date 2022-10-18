@@ -1,0 +1,27 @@
+The variable a is bound to the value 2. Which of the following will match?
+– [a,b,a]=[1,2,3] - no
+– [a,b,a]=[1,1,2] - no
+– a=1             - yes
+– ^a = 2          - no
+– ^a = 1          - yes
+– ^a=2-a          - yes
+
+iex(7)> a = 2
+2
+iex(8)> [a,b,a]=[1,2,3]
+** (MatchError) no match of right hand side value: [1, 2, 3]
+
+iex(8)> [a,b,a]=[1,1,2]
+** (MatchError) no match of right hand side value: [1, 1, 2]
+
+iex(8)> a=1
+1
+iex(9)> ^a = 2
+** (MatchError) no match of right hand side value: 2
+
+iex(9)> ^a = 1
+1
+iex(10)> ^a=2-a
+1
+iex(11)>
+

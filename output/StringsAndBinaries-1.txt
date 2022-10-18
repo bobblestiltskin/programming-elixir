@@ -1,0 +1,15 @@
+➜  programming_elixir iex code/StringsAndBinaries-1.exs
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyString.all_printable('apple')
+true
+iex(2)> MyString.all_printable('appl |')
+true
+iex(3)> MyString.all_printable([1231])
+false
+iex(4)> MyString.all_printable([126,125])
+true
+iex(5)> MyString.all_printable([126,127])
+false
+iex(6)>

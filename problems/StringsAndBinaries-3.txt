@@ -1,0 +1,3 @@
+Try the following in IEx:
+iex> [ 'cat' | 'dog' ] ['cat',100,111,103]
+Why does IEx print 'cat' as a string, but 'dog' as individual numbers?

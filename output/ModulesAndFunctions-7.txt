@@ -1,0 +1,48 @@
+Find the library functions to do the following, and then use each in IEx. (If the word Elixir or Erlang appears at the end of the challenge, then you’ll find the answer in that set of libraries.)
+– Convert a float to a string with two decimal digits. (Erlang)
+
+iex(7)> x = :io_lib.format("~4.2f", [5.678])
+'5.68'
+iex(8)> x
+'5.68'
+iex(9)>
+
+– Get the value of an operating-system environment variable. (Elixir)
+
+➜  staging export X=bob
+➜  staging iex
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> name=System.get_env("X")
+"bob"
+iex(2)> name
+"bob"
+iex(3)>
+
+– Return the extension component of a file name (so return .exs if given "dave/test.exs"). (Elixir)
+
+iex(3)> filename ="bogus.txt"
+"bogus.txt"
+iex(4)> ext = Path.extname(filename)
+".txt"
+iex(5)>
+
+– Return the process’s current working directory. (Elixir)
+
+iex(8)> dir = File.cwd!()
+"/Users/rwilkinson/work/curl/staging"
+iex(9)> dir
+"/Users/rwilkinson/work/curl/staging"
+iex(10)>
+
+– Convert a string containing JSON into Elixir data structures. (Just find; don’t install.)
+
+Poison.decode!(json, as: [%Mystuff{}])
+
+– Execute a command in your operating system’s shell.
+
+iex(11)> System.cmd("whoami", [])
+{"rwilkinson\n", 0}
+iex(12)>
+

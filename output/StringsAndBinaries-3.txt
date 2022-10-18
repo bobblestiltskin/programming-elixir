@@ -1,0 +1,24 @@
+iex(1)> [ 'cat' | 'dog' ]
+['cat', 100, 111, 103]
+iex(2)> [ 'cat' | 'log' ]
+['cat', 108, 111, 103]
+iex(3)> [ 'car' | 'log' ]
+['car', 108, 111, 103]
+iex(4)> [ 'log' | 'car' | 'log' ]
+** (CompileError) iex:4: misplaced operator |/2
+
+The | operator is typically used between brackets as the cons operator:
+
+    [head | tail]
+
+where head is a single element and the tail is the remaining of a list.
+It is also used to update maps and structs, via the %{map | key: value} notation,
+and in typespecs, such as @type and @spec, to express the union of two types
+
+iex(4)> [ 'log' | 'car' ]
+['log', 99, 97, 114]
+iex(5)> [ 'dog' | 'cat' ]
+['dog', 99, 97, 116]
+iex(6)>
+
+So, the word 'cat' is treated as the head of the list (a single element) and 'dog' is treated as the tail of the list (a list itself), and is printed as a list of numbers.

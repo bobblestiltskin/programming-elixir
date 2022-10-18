@@ -1,0 +1,17 @@
+iex(21)> call_fizz_buzz.(10)
+"Buzz"
+iex(22)> call_fizz_buzz.(11)
+11
+iex(23)> call_fizz_buzz.(12)
+"Fizz"
+iex(24)> call_fizz_buzz.(13)
+13
+iex(25)> call_fizz_buzz.(14)
+14
+iex(26)> call_fizz_buzz.(15)
+"FizzBuzz"
+iex(27)> call_fizz_buzz.(16)
+16
+iex(32)> for i <- 10 .. 16 do call_fizz_buzz.(i) end
+["Buzz", 11, "Fizz", 13, 14, "FizzBuzz", 16]
+iex(33)>

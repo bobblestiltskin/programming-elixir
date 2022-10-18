@@ -1,0 +1,4 @@
+iex(3)> mr_prefix = prefix.("Mr")
+#Function<44.79398840/1 in :erl_eval.expr/5>
+iex(4)> blobby = mr_prefix.("Blobby")
+"Mr Blobby"

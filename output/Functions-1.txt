@@ -1,0 +1,29 @@
+iex(1)> list_concat = fn (a, b) -> [a | b] end
+#Function<43.79398840/2 in :erl_eval.expr/5>
+iex(2)> list_concat.([:a, :b], [:c, :d])
+[[:a, :b], :c, :d]
+iex(3)> list_concat = fn (a, b) -> [a ++ b] end
+#Function<43.79398840/2 in :erl_eval.expr/5>
+iex(4)> list_concat.([:a, :b], [:c, :d])
+[[:a, :b, :c, :d]]
+iex(5)> list_concat = fn (a, b) -> a ++ b end
+#Function<43.79398840/2 in :erl_eval.expr/5>
+iex(6)> list_concat.([:a, :b], [:c, :d])
+[:a, :b, :c, :d]
+iex(7)>
+
+– sum.(1, 2, 3) #=> 6
+
+iex(8)> sum = fn (a,b,c) -> a+b+c end
+#Function<42.79398840/3 in :erl_eval.expr/5>
+iex(9)> sum.(1, 2, 3)
+6
+iex(10)>
+
+– pair_tuple_to_list.( { 1234, 5678 } ) #=> [ 1234, 5678 ]
+
+iex(13)> pair_tuple_to_list = fn {a,b} -> [a, b] end
+#Function<44.79398840/1 in :erl_eval.expr/5>
+iex(14)> pair_tuple_to_list.({1234, 5678})
+[1234, 5678]
+iex(15)>

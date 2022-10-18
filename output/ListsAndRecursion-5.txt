@@ -1,0 +1,54 @@
+iex(1)> MyEnum.all? []
+true
+iex(2)> MyEnum.all? [1,2,3]
+true
+iex(3)> MyEnum.all? [1]
+true
+iex(4)> MyEnum.all? [true,false]
+false
+iex(5)> MyEnum.all? [false]
+false
+iex(6)> MyEnum.all? [false,true]
+false
+iex(7)> MyEnum.all? [true,true]
+true
+iex(8)>
+
+iex(1)> MyEnum.each([1,2,3], &(&1 * &1))
+:ok
+iex(2)> MyEnum.each([1,2,3], &IO.puts/1)
+1
+2
+3
+:ok
+iex(3)>
+
+iex(1)> MyEnum.filter([1,2,3,4], &(&1 < 4))
+[1, 2, 3]
+iex(2)> MyEnum.filter([1,2,3,4], &(&1 > 2))
+[3, 4]
+iex(3)>
+
+iex(1)> MyEnum.split(1 .. 10, 3)
+{[1, 2, 3], [4, 5, 6, 7, 8, 9, 10]}
+iex(2)> MyEnum.split(1 .. 10, 15)
+{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], []}
+iex(3)> MyEnum.split(1 .. 10, 0)
+{[], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+iex(4)> MyEnum.split(1 .. 10, 1)
+{[1], [2, 3, 4, 5, 6, 7, 8, 9, 10]}
+iex(5)> MyEnum.split(1 .. 10, -3)
+{[1, 2, 3, 4, 5, 6, 7], '\b\t\n'}
+iex(6)> MyEnum.split(1 .. 10, -13)
+{[1, 0, -1, -2, -3], [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+iex(7)>
+
+iex(1)> MyEnum.take(1..10, 3)
+[1, 2, 3]
+iex(2)> MyEnum.take(1..10, -3)
+'\b\t\n'
+iex(3)> MyEnum.take(1..3, 5)
+[1, 2, 3]
+iex(4)> MyEnum.take([], 5)
+[]
+iex(5)>

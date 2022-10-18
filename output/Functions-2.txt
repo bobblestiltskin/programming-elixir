@@ -1,0 +1,9 @@
+iex(16)> fizz_buzz.(0,0,7)
+"FizzBuzz"
+iex(17)> fizz_buzz.(0,3,7)
+"Fizz"
+iex(18)> fizz_buzz.(3,0,7)
+"Buzz"
+iex(19)> fizz_buzz.(3,1,7)
+7
+iex(20)>

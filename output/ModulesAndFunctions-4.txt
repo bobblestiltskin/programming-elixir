@@ -1,0 +1,11 @@
+➜  programming_elixir iex total.exs
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Total.sum(0)
+0
+iex(2)> Total.sum(7)
+28
+iex(3)> Total.sum(3)
+6
+iex(4)>

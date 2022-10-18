@@ -1,0 +1,1 @@
+Write an anagram?(word1, word2) that returns true if its parameters are anagrams.

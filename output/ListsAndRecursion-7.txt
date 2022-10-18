@@ -1,0 +1,12 @@
+➜  programming_elixir iex primes.exs
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyList.primes 12
+[2, 3, 5, 7, 11]
+iex(2)> MyList.primes(17)
+[2, 3, 5, 7, 11, 13, 17]
+iex(3)> MyList.primes(99)
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
+ 79, 83, 89, 97]
+iex(4)>

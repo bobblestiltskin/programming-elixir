@@ -1,0 +1,44 @@
+Which of the following will match?
+– a=[1,2,3] - yes a is the list
+– a=4       - not now
+– 4=a       - not now
+– [a,b]=[1,2,3] 
+– a=[[1,2,3]]
+– [a]=[[1,2,3]] 
+– [[a]]=[[1,2,3]] - no idea ...
+
+➜  ~ iex
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.13.1) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> a=[1,2,3]
+[1, 2, 3]
+iex(2)> a=4
+4
+iex(3)> 4=a
+4
+iex(4)> [a,b]=[1,2,3] – a=[[1,2,3]]
+** (SyntaxError) iex:4:15: unexpected token: "–" (column 15, code point U+2013)
+    |
+  4 | [a,b]=[1,2,3] – a=[[1,2,3]]
+    |               ^
+
+iex(4)> [a,b]=[1,2,3] - a=[[1,2,3]]
+** (CompileError) iex:4: cannot invoke remote function :erlang.-/2 inside a match
+
+iex(4)> [a]=[[1,2,3]] - [[a]]=[[1,2,3]]
+** (CompileError) iex:4: cannot invoke remote function :erlang.-/2 inside a match
+
+iex(4)>
+
+iex(4)> [a,b]=[1,2,3]
+** (MatchError) no match of right hand side value: [1, 2, 3]
+
+iex(4)> a=[[1,2,3]]
+[[1, 2, 3]]
+iex(5)> [a]=[[1,2,3]]
+[[1, 2, 3]]
+iex(6)> [[a]]=[[1,2,3]]
+** (MatchError) no match of right hand side value: [[1, 2, 3]]
+
+iex(6)>

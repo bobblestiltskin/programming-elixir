@@ -1,0 +1,16 @@
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Chop.guess(273, 1..1000)
+Is it 500
+Is it 250
+Is it 375
+Is it 313
+Is it 282
+Is it 266
+Is it 274
+Is it 270
+Is it 272
+Is it 273
+273
+:ok

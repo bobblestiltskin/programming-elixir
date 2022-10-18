@@ -1,0 +1,32 @@
+➤ Exercise: ModulesAndFunctions-2
+Run the result in IEx. Use both techniques to compile the file.
+
+➜  programming_elixir iex times.exs
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Times.double(7)
+14
+iex(2)> Times.triple(7)
+21
+iex(3)> Times.triple(5)
+15
+iex(4)>
+User switch command
+ --> q
+➜  programming_elixir iex
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> c "times.exs"
+[Times]
+iex(2)> Times.double(7)
+14
+iex(3)> Times.triple(5)
+15
+iex(4)>
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+^C%
+➜  programming_elixir
+

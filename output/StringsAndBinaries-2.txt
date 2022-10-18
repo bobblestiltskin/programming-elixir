@@ -1,0 +1,23 @@
+➜  programming_elixir iex code/StringsAndBinaries-2.exs
+Erlang/OTP 23 [erts-11.2.2.9] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyString.anagram?("bad credit", "debit card")
+true
+iex(2)> MyString.anagram?("below", "elbow")
+true
+iex(3)> MyString.anagram?("below", "elbows")
+false
+iex(4)> MyString.anagram?("below", "elbox")
+false
+iex(5)> MyString.anagram?("thing", "night")
+true
+iex(6)> MyString.anagram?("act", "cat")
+true
+iex(7)> MyString.anagram?("desserts", "stressed")
+true
+iex(8)> MyString.anagram?("gainly", "laying")
+true
+iex(9)> MyString.anagram?("bad credit", "debit card")
+true
+iex(10)>

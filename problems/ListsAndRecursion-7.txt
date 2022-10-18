@@ -1,0 +1,1 @@
+In the last exercise of Chapter 7, Lists and Recursion, on page 71, you wrote a span function. Use it and list comprehensions to return a list of the prime numbers from 2 to n.
