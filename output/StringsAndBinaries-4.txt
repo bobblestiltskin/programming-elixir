@@ -1,0 +1,20 @@
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Parse.calculate('123 + 456')
+579
+iex(2)> Parse.calculate('103 + 456')
+559
+iex(3)> Parse.calculate('103 + 459')
+562
+iex(4)> Parse.calculate('103+459')  
+562
+iex(5)> Parse.calculate('103 +459')
+562
+iex(6)> Parse.calculate('103+ 459') 
+562
+iex(7)> Parse.calculate('103* 459')
+47277
+iex(8)> Parse.calculate('103/ 459')
+0.22440087145969498
+iex(9)> Parse.calculate('103 - 459')
+-356
+iex(10)> 
