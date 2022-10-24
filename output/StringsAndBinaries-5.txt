@@ -1,0 +1,9 @@
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyString.centre(["cat", "zebra", "elephant"])
+  cat   
+ zebra  
+elephant
+:ok
+iex(2)> 
