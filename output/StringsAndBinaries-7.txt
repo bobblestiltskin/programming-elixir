@@ -1,0 +1,15 @@
+ob@portugal:~/src/programming_elixir$ iex code/StringsAndBinaries-7.exs
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyFile.read_data("./code/StringsAndBinaries-7.data")
+[id: 123, ship_to: :NC, net_amount: 100.0, total_amount: 107.5]
+[id: 124, ship_to: :OK, net_amount: 35.5]
+[id: 125, ship_to: :TX, net_amount: 24.0, total_amount: 25.92]
+[id: 126, ship_to: :TX, net_amount: 44.8, total_amount: 48.384]
+[id: 127, ship_to: :NC, net_amount: 25.0, total_amount: 26.875]
+[id: 128, ship_to: :MA, net_amount: 10.0]
+[id: 129, ship_to: :CA, net_amount: 102.0]
+[id: 120, ship_to: :NC, net_amount: 50.0, total_amount: 53.75]
+:ok
+iex(2)> 

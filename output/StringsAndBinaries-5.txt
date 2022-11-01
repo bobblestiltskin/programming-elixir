@@ -6,4 +6,10 @@ iex(1)> MyString.centre(["cat", "zebra", "elephant"])
  zebra  
 elephant
 :ok
-iex(2)> 
+iex(2)> MyString.centre(["cat", "∂og", "zebra", "elephant"])
+  cat   
+  ∂og   
+ zebra  
+elephant
+:ok
+iex(3)> 
