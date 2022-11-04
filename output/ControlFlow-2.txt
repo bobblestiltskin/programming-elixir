@@ -1,0 +1,3 @@
+I like separate functions with guard clauses.
+
+Though, I am not sure it expresses the problem best.

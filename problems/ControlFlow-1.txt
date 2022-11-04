@@ -1,0 +1,1 @@
+Rewrite the FizzBuzz example using case.
