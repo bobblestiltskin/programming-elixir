@@ -1,0 +1,46 @@
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-3.exs
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyLink.run()
+** (EXIT from #PID<0.115.0>) shell process exited with reason: :out_of_here
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)>
+
+if we explicitly exit() from my_function
+
+or
+
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-3.exs
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyLink.run()
+MESSAGE RECEIVED: "HELLO FROM MY_FUNCTION"
+Nothing happened as far as I am concerned
+Nothing happened as far as I am concerned
+Nothing happened as far as I am concerned
+Nothing happened as far as I am concerned
+Nothing happened as far as I am concerned
+Nothing happened as far as I am concerned
+
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+
+If we fall out from my_function (implicitly exit) and have an after statement
+
+or
+
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-3.exs
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyLink.run()
+MESSAGE RECEIVED: "HELLO FROM MY_FUNCTION"
+
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+^Cbob@portugal:~/src/programming_elixir$
+
+If we fall out from my_function (implicitly exit) and have no after statement

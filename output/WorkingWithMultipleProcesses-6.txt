@@ -1,0 +1,2 @@
+Probably quicker - who knows what self() would return in the spawn_link command 
+looks like the pid of the spawned process - the child

@@ -1,0 +1,52 @@
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-9.exs
+Erlang/OTP 25 [erts-13.1.1] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Controller.run("./problems")
+[
+  {"./problems/ControlFlow-1.txt", 0},
+  {"./problems/ControlFlow-2.txt", 0},
+  {"./problems/ControlFlow-3.txt", 0},
+  {"./problems/Functions-1.txt", 1},
+  {"./problems/Functions-2.txt", 0},
+  {"./problems/Functions-3.txt", 0},
+  {"./problems/Functions-4.txt", 0},
+  {"./problems/Functions-5.txt", 0},
+  {"./problems/ListsAndRecursion-1.txt", 0},
+  {"./problems/ListsAndRecursion-2.txt", 0},
+  {"./problems/ListsAndRecursion-3.txt", 0},
+  {"./problems/ListsAndRecursion-4.txt", 0},
+  {"./problems/ListsAndRecursion-5.txt", 0},
+  {"./problems/ListsAndRecursion-6.txt", 0},
+  {"./problems/ListsAndRecursion-7.txt", 0},
+  {"./problems/ListsAndRecursion-8.txt", 0},
+  {"./problems/ModulesAndFunctions-1.txt", 0},
+  {"./problems/ModulesAndFunctions-2.txt", 0},
+  {"./problems/ModulesAndFunctions-3.txt", 0},
+  {"./problems/ModulesAndFunctions-4.txt", 0},
+  {"./problems/ModulesAndFunctions-5.txt", 0},
+  {"./problems/ModulesAndFunctions-6.txt", 0},
+  {"./problems/ModulesAndFunctions-7.txt", 0},
+  {"./problems/OrganizingAProject-6.txt", 2},
+  {"./problems/PatternMatching-1.txt", 0},
+  {"./problems/PatternMatching-2.txt", 0},
+  {"./problems/PatternMatching-3.txt", 0},
+  {"./problems/StringsAndBinaries-1.txt", 0},
+  {"./problems/StringsAndBinaries-2.txt", 0},
+  {"./problems/StringsAndBinaries-3.txt", 3},
+  {"./problems/StringsAndBinaries-4.txt", 0},
+  {"./problems/StringsAndBinaries-5.txt", 2},
+  {"./problems/StringsAndBinaries-6.txt", 0},
+  {"./problems/StringsAndBinaries-7.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-1.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-2.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-3.txt", 1},
+  {"./problems/WorkingWithMultipleProcesses-4.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-5.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-6.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-7.txt", 0},
+  {"./problems/WorkingWithMultipleProcesses-8.txt", 1},
+  {"./problems/WorkingWithMultipleProcesses-9.txt", 1}
+]
+iex(2)> 
+

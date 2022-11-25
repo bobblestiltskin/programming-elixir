@@ -1,0 +1,3 @@
+Exercise: WorkingWithMultipleProcesses-4
+Do the same, but have the child raise an exception. What difference do
+you see in the tracing?

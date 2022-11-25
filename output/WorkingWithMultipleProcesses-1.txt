@@ -1,0 +1,26 @@
+bob@portugal:~/src/programming_elixir$ elixir -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(10)"
+{3628, "Result is 10"}
+bob@portugal:~/src/programming_elixir$ elixir -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(100)"
+{2438, "Result is 100"}
+bob@portugal:~/src/programming_elixir$ elixir -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(1_000)"
+{5714, "Result is 1000"}
+bob@portugal:~/src/programming_elixir$ elixir -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(10_000)"
+{39848, "Result is 10000"}
+bob@portugal:~/src/programming_elixir$ elixir -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(400_000)"
+
+20:08:27.714 [error] Too many processes
+
+
+** (SystemLimitError) a system limit has been reached
+    :erlang.spawn(Chain, :counter, [#PID<0.97.8>])
+    code/WorkingWithMultipleProcesses-1.exs:11: anonymous fn/2 in Chain.create_processes/1
+    (elixir 1.14.0) lib/enum.ex:4299: Enum.reduce_range/5
+    code/WorkingWithMultipleProcesses-1.exs:14: Chain.create_processes/1
+    (stdlib 3.17.2.1) timer.erl:197: :timer.tc/3
+    code/WorkingWithMultipleProcesses-1.exs:27: Chain.run/1
+    (stdlib 3.17.2.1) erl_eval.erl:685: :erl_eval.do_apply/6
+bob@portugal:~/src/programming_elixir$ elixir --erl "+P 1000000" -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(400_000)"
+{1153044, "Result is 400000"}
+bob@portugal:~/src/programming_elixir$ elixir --erl "+P 1000000" -r code/WorkingWithMultipleProcesses-1.exs -e "Chain.run(1_000_000)"
+{3209461, "Result is 1000000"}
+bob@portugal:~/src/programming_elixir$ 

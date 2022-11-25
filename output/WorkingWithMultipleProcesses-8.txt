@@ -1,0 +1,35 @@
+bob@portugal:~/src/programming_elixir$ iex fix.exs
+Erlang/OTP 25 [erts-13.1.1] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+warning: do not use "length(queue) > 0" to check if a list is not empty since length always traverses the whole list. Prefer to pattern match on a non-empty list, such as [_ | _], or use "queue != []" as a guard
+  fix.exs:29
+
+[{37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}, {37, 24157817}]
+
+ #
+time (s)
+ 1
+6.71
+ 2
+3.45
+ 3
+2.46
+ 4
+1.87
+ 5
+1.93
+ 6
+1.93
+ 7
+1.93
+ 8
+1.90
+ 9
+1.88
+10
+1.88
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> 
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+^Cbob@portugal:~/src/programming_elixir$

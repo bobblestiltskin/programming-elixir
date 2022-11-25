@@ -1,0 +1,25 @@
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-51.exs 
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyLink.run()
+MESSAGE RECEIVED: "HELLO FROM MY_FUNCTION"
+MESSAGE RECEIVED: {:DOWN, #Reference<0.939417345.3520593921.47292>, :process, #PID<0.117.0>, :normal}
+
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+bob@portugal:~/src/programming_elixir$ iex code/WorkingWithMultipleProcesses-52.exs 
+Erlang/OTP 24 [erts-12.3.2.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> MyLink.run()
+
+20:44:09.986 [error] Process #PID<0.117.0> raised an exception
+** (RuntimeError) RAISED FROM MY_FUNCTION
+    code/WorkingWithMultipleProcesses-52.exs:5: MyLink.my_function/0
+MESSAGE RECEIVED: {:DOWN, #Reference<0.3249950746.298582017.13186>, :process, #PID<0.117.0>, {%RuntimeError{message: "RAISED FROM MY_FUNCTION"}, [{MyLink, :my_function, 0, [file: 'code/WorkingWithMultipleProcesses-52.exs', line: 5, error_info: %{module: Exception}]}]}}
+
+BREAK: (a)bort (A)bort with dump (c)ontinue (p)roc info (i)nfo
+       (l)oaded (v)ersion (k)ill (D)b-tables (d)istribution
+^Cbob@portugal:~/src/programming_elixir$ 
+
