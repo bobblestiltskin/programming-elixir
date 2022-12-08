@@ -1,0 +1,65 @@
+The server restarted when popping an empty stack.
+
+The stack after restart was the value used to initialise the stack in application.ex
+
+{Stack.Server, ["alpha", 2, 3.1415927, "omega"]}
+
+bob@portugal:~/src/programming_elixir/stack$ iex -S mix
+Erlang/OTP 25 [erts-13.1.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> Stack.Server.pop
+"alpha"
+iex(2)> Stack.Server.pop
+2
+iex(3)> Stack.Server.pop
+3.1415927
+iex(4)> Stack.Server.pop
+"omega"
+iex(5)> Stack.Server.pop
+
+16:39:47.926 [error] GenServer Stack.Server terminating
+** (Protocol.UndefinedError) protocol String.Chars not implemented for {:badarg, [{:erlang, :hd, [[]], [error_info: %{module: :erl_erts_errors}]}, {Stack.Server, :handle_call, 3, [file: 'lib/stack/server.ex', line: 21]}, {:gen_server, :try_handle_call, 4, [file: 'gen_server.erl', line: 1149]}, {:gen_server, :handle_msg, 6, [file: 'gen_server.erl', line: 1178]}, {:proc_lib, :init_p_do_apply, 3, [file: 'proc_lib.erl', line: 240]}]} of type Tuple. This protocol is implemented for the following type(s): Atom, BitString, Date, DateTime, Float, Integer, List, NaiveDateTime, Time, URI, Version, Version.Requirement
+    (elixir 1.14.0) lib/string/chars.ex:3: String.Chars.impl_for!/1
+    (elixir 1.14.0) lib/string/chars.ex:22: String.Chars.to_string/1
+    (stack 0.1.0) lib/stack/server.ex:33: Stack.Server.terminate/2
+    (stdlib 4.1.1) gen_server.erl:1161: :gen_server.try_terminate/3
+    (stdlib 4.1.1) gen_server.erl:1351: :gen_server.terminate/10
+    (stdlib 4.1.1) proc_lib.erl:240: :proc_lib.init_p_do_apply/3
+Last message (from #PID<0.156.0>): :pop
+State: []
+Client #PID<0.156.0> is alive
+
+    (stdlib 4.1.1) gen.erl:256: :gen.do_call/4
+    (elixir 1.14.0) lib/gen_server.ex:1035: GenServer.call/3
+    (stdlib 4.1.1) erl_eval.erl:744: :erl_eval.do_apply/7
+    (elixir 1.14.0) src/elixir.erl:283: :elixir.eval_forms/3
+    (elixir 1.14.0) lib/module/parallel_checker.ex:100: Module.ParallelChecker.verify/1
+    (iex 1.14.0) lib/iex/evaluator.ex:329: IEx.Evaluator.eval_and_inspect/3
+    (iex 1.14.0) lib/iex/evaluator.ex:303: IEx.Evaluator.eval_and_inspect_parsed/3
+    (iex 1.14.0) lib/iex/evaluator.ex:292: IEx.Evaluator.parse_eval_inspect/3
+** (exit) exited in: GenServer.call(Stack.Server, :pop, 5000)
+    ** (EXIT) an exception was raised:
+        ** (Protocol.UndefinedError) protocol String.Chars not implemented for {:badarg, [{:erlang, :hd, [[]], [error_info: %{module: :erl_erts_errors}]}, {Stack.Server, :handle_call, 3, [file: 'lib/stack/server.ex', line: 21]}, {:gen_server, :try_handle_call, 4, [file: 'gen_server.erl', line: 1149]}, {:gen_server, :handle_msg, 6, [file: 'gen_server.erl', line: 1178]}, {:proc_lib, :init_p_do_apply, 3, [file: 'proc_lib.erl', line: 240]}]} of type Tuple. This protocol is implemented for the following type(s): Atom, BitString, Date, DateTime, Float, Integer, List, NaiveDateTime, Time, URI, Version, Version.Requirement
+            (elixir 1.14.0) lib/string/chars.ex:3: String.Chars.impl_for!/1
+            (elixir 1.14.0) lib/string/chars.ex:22: String.Chars.to_string/1
+            (stack 0.1.0) lib/stack/server.ex:33: Stack.Server.terminate/2
+            (stdlib 4.1.1) gen_server.erl:1161: :gen_server.try_terminate/3
+            (stdlib 4.1.1) gen_server.erl:1351: :gen_server.terminate/10
+            (stdlib 4.1.1) proc_lib.erl:240: :proc_lib.init_p_do_apply/3
+    (elixir 1.14.0) lib/gen_server.ex:1038: GenServer.call/3
+iex(5)> Stack.Server.push "apple"
+:ok
+iex(6)> Stack.Server.push "banana"
+:ok
+iex(7)> Stack.Server.pop          
+"banana"
+iex(8)> Stack.Server.pop
+"apple"
+iex(9)> Stack.Server.pop
+"alpha"
+iex(10)> Stack.Server.pop
+2
+iex(11)> Stack.Server.pop
+3.1415927
+iex(12)>

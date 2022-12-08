@@ -1,0 +1,25 @@
+bob@portugal:~/src/programming_elixir$ iex code/OTP-Servers-2.ex 
+Erlang/OTP 25 [erts-13.1.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> {:ok, pid} = GenServer.start_link(Stack.Server, [5,"cat",9])
+{:ok, #PID<0.119.0>}
+iex(2)> GenServer.cast(pid, {:push, "apple"})                       
+:ok
+iex(3)> GenServer.call(pid, :pop)            
+"apple"
+iex(4)> GenServer.call(pid, :pop)
+5
+iex(5)> GenServer.cast(pid, {:push, "apple"})
+:ok
+iex(6)> GenServer.cast(pid, {:push, "banana"})
+:ok
+iex(7)> GenServer.call(pid, :pop)             
+"banana"
+iex(8)> GenServer.call(pid, :pop)
+"apple"
+iex(9)> GenServer.call(pid, :pop)
+"cat"
+iex(10)> GenServer.call(pid, :pop)
+9
+iex(11)> 

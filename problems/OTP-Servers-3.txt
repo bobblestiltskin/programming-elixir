@@ -1,0 +1,3 @@
+➤ Exercise: OTP-Servers-3
+Give your stack server process a name, and make sure it is accessible by
+that name in IEx.

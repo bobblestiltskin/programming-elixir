@@ -1,0 +1,27 @@
+bob@portugal:~/src/programming_elixir$ iex code/OTP-Servers-5.ex
+Erlang/OTP 25 [erts-13.1.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> {:ok, pid} = Stack.Server.start_link([5,"cat",9])           
+{:ok, #PID<0.119.0>}
+iex(2)> Stack.Server.push "apple"                                   
+:ok
+iex(3)> Stack.Server.pop                                            
+"apple"
+iex(4)> Stack.Server.pop
+5
+iex(5)> Stack.Server.push "apple"
+:ok
+iex(6)> Stack.Server.push "apple"
+:ok
+iex(7)> Stack.Server.pop         
+"apple"
+iex(8)> Stack.Server.pop
+"apple"
+iex(9)> Stack.Server.pop
+"cat"
+iex(10)> Stack.Server.terminate "just cos", Stack.Server.pop
+Terminate reason is just cos
+Terminate state is 9
+:ok
+iex(11)> 
