@@ -1,0 +1,12 @@
+iex(node_one@portugal)1> fun = fn -> IO.puts(Enum.join(File.ls!, ",")) end
+#Function<43.3316493/0 in :erl_eval.expr/6>
+iex(node_one@portugal)2> spawn(fun)
+youtube-dl.0,umountstick,run_net_dep,files_to_add,umountsamsung3g,umountwork,concert_html,work_mount,electrum-4.3.1-x86_64.AppImage,umountdata,anbox,ym4a,jammys.0,dsh,film_table,atmd,data_mount,cindex,csearch,dpgsh,darchrun,condense.pl,electrum-4.2.2-x86_64.AppImage,randomone,pdf_thumbnails,dpg,darch,rotate_90_pdf,flac2mp3,stick_mount,squash_mp4,jammys,cgrep,sdd1_mount,viber.AppImage,samsung_mount
+#PID<0.121.0>
+iex(node_one@portugal)3> Node.spawn(:"node_two@portugal", fun)            
+#PID<13016.123.0>
+discogs_data,javascript,minsky,jobs,project_euler,gnucobol-code,Audio-GtkGramofile.0,programming-typescript-answers,Minsky-2.35.0,whatsdesk,cs6120,ocaml,ThinkPython2,curl,link_duplicates,codesearch,react,anbox-playstore-installer,tcl,the-little-go-book,ctest,bash-git-prompt,nitrogen,django,programming_elixir,myconcerts,old,testdisk,wire-desktop,docker,questions3.txt,typescript,gtk3,rust,debos,go,elixir,sample-legacy-django-app,alert,c++,siglo,discogs,project_euler.https,libgramofile-code,perl,get_iplayer,vim-elixir,python,InfiniTime
+iex(node_one@portugal)4> Node.spawn(:"node_one@portugal", fun)
+#PID<0.129.0>
+youtube-dl.0,umountstick,run_net_dep,files_to_add,umountsamsung3g,umountwork,concert_html,work_mount,electrum-4.3.1-x86_64.AppImage,umountdata,anbox,ym4a,jammys.0,dsh,film_table,atmd,data_mount,cindex,csearch,dpgsh,darchrun,condense.pl,electrum-4.2.2-x86_64.AppImage,randomone,pdf_thumbnails,dpg,darch,rotate_90_pdf,flac2mp3,stick_mount,squash_mp4,jammys,cgrep,sdd1_mount,viber.AppImage,samsung_mount
+iex(node_one@portugal)5> 

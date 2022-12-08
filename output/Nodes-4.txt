@@ -1,0 +1,45 @@
+bob@portugal:~/src/programming_elixir$ iex
+Erlang/OTP 25 [erts-13.1.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:1] [jit:ns]
+
+Interactive Elixir (1.14.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)> c("code/Nodes-4.exs")                               
+[Ring]
+iex(2)> pid1 = spawn(Ring, :generate, ["alpha", nil, true]) 
+#PID<0.121.0>
+iex(3)> pid2 = spawn(Ring, :generate, ["beta", nil, false]) 
+#PID<0.123.0>
+iex(4)> pid3 = spawn(Ring, :generate, ["gamma", nil, false])
+#PID<0.125.0>
+iex(5)> pid4 = spawn(Ring, :generate, ["delta", nil, false])
+#PID<0.127.0>
+iex(6)> send(pid1, {:register, pid2})                       
+{:register, #PID<0.123.0>}
+<alpha> sent tick to <beta>
+<beta> sent tick to <alpha>
+<alpha> sent tick to <beta>
+<beta> sent tick to <alpha>                                 
+<alpha> sent tick to <beta>                                 
+<beta> sent tick to <alpha>                                
+<alpha> sent tick to <beta>          
+iex(7)> send(pid2, {:register, pid3})
+{:register, #PID<0.125.0>}
+<beta> sent tick to <gamma>                                 
+<gamma> sent tick to <alpha>                                
+<alpha> sent tick to <beta>                                 
+<beta> sent tick to <gamma>                                 
+<gamma> sent tick to <alpha>         
+<alpha> sent tick to <beta>          
+<beta> sent tick to <gamma>          
+iex(8)> send(pid3, {:register, pid4})
+{:register, #PID<0.127.0>}
+<gamma> sent tick to <delta>
+<delta> sent tick to <alpha>
+<alpha> sent tick to <beta>
+<beta> sent tick to <gamma>
+<gamma> sent tick to <delta>
+<delta> sent tick to <alpha>
+<alpha> sent tick to <beta>
+<beta> sent tick to <gamma>
+<gamma> sent tick to <delta>
+<delta> sent tick to <alpha>
+iex(9)> 

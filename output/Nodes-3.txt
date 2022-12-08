@@ -1,0 +1,7 @@
+AFAIK the code is already doing this in the lines ...
+
+Enum.each clients, fn client ->
+  send client, { :tick }
+end
+
+?

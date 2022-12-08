@@ -1,0 +1,1 @@
+Modern Operating Systems are not RTOS - schedulers run, processes are swapped out. Any times such as this will necessarily be approximate because of the demans of multi-user operating systems.
